@@ -130,7 +130,6 @@ class JIRAWrap(JIRA):
         while True:
             new_issues = self.issues_chunk(query, counter, inc)
             issues += new_issues
-            break
             if len(new_issues) < inc:
                 break
             counter += inc
